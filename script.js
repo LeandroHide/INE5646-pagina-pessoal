@@ -1,20 +1,16 @@
-var topico1 = {titulo: "Introdução à Internet e à Web" , assunto: "Como funciona a Web"};
-var topico2 = {titulo: "Os Pilares do Front-End" , assunto: "HTML, CSS, JavaScript"};
+var counterH = 1;
+var counterD = 1;
 
-var topicos = [topico1, topico2];
-
-var listaTopico = document.getElementById("listaTopicos");
-
-var ulTopico = document.createElement("UL");
-
-
-
-for(topico of topicos){
-    var liTopico = document.createElement("LI");
-    liTopico.setAttribute('style', 'white-space: pre;');
-    liTopico.textContent = `Topico: ${topico.titulo}` + "\n";
-    liTopico.textContent += `Assunto: ${topico.assunto}` + "\n\n";
-    ulTopico.appendChild(liTopico);
+function addHobbie(divName){
+  var newdiv = document.createElement('div');
+  newdiv.innerHTML = "Hobbie " + (counterH + 1) + " <input type='text' name='myInputs[]'>";
+  document.getElementById(divName).appendChild(newdiv);
+  counterH++;
 }
 
-listaTopico.appendChild(ulTopico);
+function addDuvida(divName){
+  var newdiv = document.createElement('div');
+  newdiv.innerHTML = "Duvida " + (counterD + 1) + " <input type='text' name='myInputs[]'>";
+  document.getElementById(divName).appendChild(newdiv);
+  counterD++;
+}

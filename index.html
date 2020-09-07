@@ -10,7 +10,7 @@
 
     <style>
         body{
-            text-align:center;
+            text-align: center;
             background-color:lightgreen;
         }
         p{
@@ -37,10 +37,17 @@
         <div class = "curiosidades">
           Nasci em Florianópolis, mas tenho descendencia japonesa. <br><br>
           No meu tempo livre, procuro jogar jogos onlines ou assistir animes para relaxar.
-        </div>
+        </div><br>
 
-        <div id="listaTopicos">
+        <div id="dynamicInputHobbie">
+             Hobbie 1 <input type="text" name="myInputs[]">
         </div>
+        <br><input type="button" value="Adicione outro hobbie" onClick="addHobbie('dynamicInputHobbie');">
+
+        <br><br><div id="dynamicInputDuvida">
+             Duvida 1 <input type="text" name="myInputs[]">
+        </div>
+        <br><input type="button" value="Adicione outra Duvida" onClick="addDuvida('dynamicInputDuvida');">
 
 
     </body>
