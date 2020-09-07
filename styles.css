@@ -1,0 +1,13 @@
+.curiosidades{
+    padding: 30px;
+    background-color: lightblue;
+    font-size: 20px;
+}
+
+.curiosidades:hover{
+    background-color: aquamarine;
+}
+
+.curso:hover{
+    background-color:crimson;
+}
