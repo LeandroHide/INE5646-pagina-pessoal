@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html lang="pt-br">
+    <head>
+        <title> Atividade 1 </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+
+    <style>
+        body{
+            text-align: center;
+            background-color:lightgreen;
+        }
+        p{
+            padding:10px;
+            font: 15px Arial;
+        }
+        p.nome {
+            color: red;
+        }
+        p.curso {
+            color: blueviolet;
+        }
+        p.email {
+            color: brown;
+        }
+    </style>
+
+    <body>
+        <h1 style="color:blue"> Página Pessoal </h1>
+        <p class = "nome"> <strong>Nome:</strong> Leandro Hideki Aihara </p>
+        <p class = "curso"> <strong>Curso:</strong> Ciências da Computação </p>
+        <p class = "email"> <strong>Email:</strong> leandroh.aihara26@gmail.com </p>
+        <img title="Minha foto" src="minhaFoto.png" alt="Foto bugo" width=300 height=300><br><br>
+        <div class = "curiosidades">
+          Nasci em Florianópolis, mas tenho descendencia japonesa. <br><br>
+          No meu tempo livre, procuro jogar jogos onlines ou assistir animes para relaxar.
+        </div><br>
+
+        <div id="dynamicInputHobbie">
+             Hobbie 1 <input type="text" name="myInputs[]">
+        </div>
+        <br><input type="button" value="Adicione outro hobbie" onClick="addHobbie('dynamicInputHobbie');">
+
+        <br><br><div id="dynamicInputDuvida">
+             Duvida 1 <input type="text" name="myInputs[]">
+        </div>
+        <br><input type="button" value="Adicione outra Duvida" onClick="addDuvida('dynamicInputDuvida');">
+
+
+    </body>
+
+    <script src="script.js"></script>
+
+</html>
