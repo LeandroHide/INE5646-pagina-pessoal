@@ -1,16 +1,20 @@
-var counterH = 1;
-var counterD = 1;
+document.getElementById("botaoHobbies").addEventListener("click", function(){
+    myFunction("hobbies", "listaH");
+});
 
-function addHobbie(divName){
-  var newdiv = document.createElement('div');
-  newdiv.innerHTML = "Hobbie " + (counterH + 1) + " <input type='text' name='myInputs[]'>";
-  document.getElementById(divName).appendChild(newdiv);
-  counterH++;
-}
+document.getElementById("botaoDuvidas").addEventListener("click", function(){
+    myFunction("duvidas", "listaD");
+});
 
-function addDuvida(divName){
-  var newdiv = document.createElement('div');
-  newdiv.innerHTML = "Duvida " + (counterD + 1) + " <input type='text' name='myInputs[]'>";
-  document.getElementById(divName).appendChild(newdiv);
-  counterD++;
+function myFunction(input, list) {
+    var entrada = document.getElementById(input);
+    var texto = document.createTextNode(entrada.value);
+    var li = document.createElement("LI");
+
+    li.appendChild(texto);
+
+    var lista = document.getElementById(list);
+    lista.appendChild(li);
+
+    entrada.value = "";
 }
